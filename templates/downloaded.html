@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='download.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Downloaded Successfully</h1>
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %}
+        {% if thumbnail_url %}
+        <div>
+            <img src="{{ thumbnail_url }}" alt="Video Thumbnail">
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
